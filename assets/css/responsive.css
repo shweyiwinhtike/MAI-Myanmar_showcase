@@ -1,0 +1,386 @@
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for large than 575px screen
+ */
+
+@media (min-width: 575px) {
+
+  /**
+     * CUSTOM PROPERTY
+     */
+
+  :root {
+
+    /**
+       * typography
+       */
+
+    /* font size */
+    --fontSize-1: 4.4rem;
+    --fontSize-2: 3.5rem;
+
+    /**
+       * spacing
+       */
+
+    --section-padding: 100px;
+
+  }
+
+
+
+  /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .headline-3 {
+    --fontSize-2: 2.4rem;
+  }
+
+
+
+  /**
+     * HEADER
+     */
+
+  .header .btn {
+    margin-right: 0;
+  }
+
+  .header.active {
+    padding-block: 20px;
+  }
+
+
+
+
+  /**
+   * training
+   */
+
+  .training {
+    position: relative;
+  }
+
+  /**
+     * HERO
+     */
+
+  .hero {
+    position: relative;
+  }
+
+  .hero .input-wrapper {
+    max-width: 390px;
+  }
+
+  /**
+     * RECENT POST
+     */
+
+  .recent-post-card {
+    grid-template-columns: 0.5fr 1fr;
+    gap: 20px;
+  }
+
+  .pagination-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+
+
+  /**
+     * ASIDE
+     */
+
+  .aside-title {
+    --fontSize-2: 2rem;
+  }
+
+}
+
+
+
+
+@media (min-width: 768px) {
+
+  /**
+     * CUSTOM PROPERTY
+     */
+
+  :root {
+
+    /**
+       * typography
+       */
+
+    /* font size */
+    --fontSize-1: 6.4rem;
+    --fontSize-2: 4.5rem;
+
+  }
+
+  /*hero*/
+  .hero {
+    margin-block-start: 20px;
+  }
+
+  .hero-banner {
+    position: relative;
+    padding: 20px 200px;
+  }
+
+
+  /**
+   * training
+   */
+
+
+  .training-list li {
+    width: calc(33.33% - 20px);
+  }
+
+  .training-list li .headline-3 {
+    --fontSize-2: 2rem;
+  }
+
+  .training-card {
+    min-height: 400px;
+  }
+
+
+
+  /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 730px;
+  }
+
+
+
+
+
+
+  /**
+     * RECENT POST
+     */
+
+  .recent-post-card {
+    grid-template-columns: 0.7fr 1fr;
+  }
+
+}
+
+
+/**
+   * responsive for large than 992px screen
+   */
+
+
+@media (min-width: 992px) {
+
+  /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 940px;
+  }
+
+
+
+  /**
+     * HERO
+     */
+
+  .hero {
+    padding-block-start: calc(var(--section-padding) + 50px);
+    margin-block-start: -60px;
+
+  }
+
+  .hero .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .hero-banner {
+    position: relative;
+    padding: 70px;
+  }
+
+
+  .hero-social-list li {
+    padding: 10px;
+  }
+
+
+  /**
+   * training
+   */
+
+  .training-card {
+    min-height: 430px;
+  }
+
+
+
+
+
+  /**
+     * TAGS
+     */
+
+  .tags .grid-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+
+  /**
+     * RECENT POST
+     */
+
+  .recent-post .container {
+    grid-template-columns: 1fr 0.6fr;
+    align-items: flex-start;
+  }
+
+  /**
+     * FOOTER
+     */
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .copyright {
+    margin-block-end: 0;
+  }
+
+}
+
+
+/**
+   * responsive for large than 1200px screen
+   */
+
+@media (min-width: 1200px) {
+
+
+
+  /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 1100px;
+  }
+
+
+
+
+  /*header*/
+
+  .nav-open-btn,
+  .navbar-top,
+  .navbar-bottom,
+  .copyright-text {
+    display: none;
+  }
+
+
+
+  .navbar,
+  .navbar.active {
+    all: unset;
+    display: block;
+  }
+
+  body.nav-active {
+    overflow-y: overlay;
+  }
+
+  .navbar-list {
+    border-block-end: none;
+    display: flex;
+    gap: 40px;
+    margin-inline: auto;
+  }
+
+  .header .btn {
+    margin-inline-start: 0;
+  }
+
+  .navbar-link {
+    color: var(--bg-dark-blue);
+    font-weight: unset;
+  }
+
+  .navbar-link:is(:hover, :focus-visible) {
+    color: var(--text-carolina-blue);
+    transform: translateX(0);
+  }
+
+
+
+
+  .hero .container {
+    max-width: 1050px;
+  }
+
+  /**
+   * training
+   */
+
+  .training-card {
+    min-height: 490px;
+  }
+
+
+
+  /*tags*/
+
+  .tags .grid-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /*footer*/
+  .footer-top {
+    gap: 40px;
+    padding-inline: 120px;
+  }
+
+
+}
+
+
+/**
+   * responsive for large than 1400px screen
+   */
+
+@media (min-width: 1400px) {
+
+
+  .container {
+    max-width: 1350px;
+  }
+
+}
